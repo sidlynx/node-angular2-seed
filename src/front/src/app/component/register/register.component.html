@@ -1,0 +1,62 @@
+<div class="container-fluid" style="height: 100%;width:100%;">
+  <div class="row">
+    <div class="col-4">
+
+    </div>
+    <div class="col-4" >
+
+      <div style="padding:60px;">
+        <div style="text-align: center;margin-top:8%;">
+          <div ><i class="fa fa-5x fa-gg-circle"></i></div>
+          <div class="fwb" style="font-size:18px;margin-top:20px;">Sign in</div>
+        </div>
+        <div style="background-color:#fff;border: 1px solid #d8dee2;
+    border-radius: 5px;padding:12px;margin-top:8px;">
+          <form name="form" (ngSubmit)="f.form.valid && login()" #f="ngForm" novalidate>
+            <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !firstName.valid }">
+              <label for="firstName" style="font-weight:bold;">Fisrt name</label>
+              <input type="text" class="form-control" name="firstName" id="firstName" [(ngModel)]="model.firstName"
+                     #username="ngModel" required/>
+              <div *ngIf="f.submitted && !username.valid" class="help-block">First is required</div>
+            </div>
+
+            <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !lastName.valid }">
+              <label for="lastName" style="font-weight:bold;">Last name</label>
+              <input type="text" class="form-control" name="lastName" id="lastName" [(ngModel)]="model.lastName"
+                     #username="ngModel" required/>
+              <div *ngIf="f.submitted && !lastName.valid" class="help-block">Last name is required</div>
+            </div>
+
+            <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !email.valid }">
+              <label for="email" style="font-weight:bold;">Email adress</label>
+              <input type="text" class="form-control" name="email" id="email" [(ngModel)]="model.email"
+                     #username="ngModel" required/>
+              <div *ngIf="f.submitted && !email.valid" class="help-block">Last name is required</div>
+            </div>
+
+
+
+            <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !password.valid }">
+              <label for="password" style="display: block;font-weight:bold;">Password <a href="/login" style="float: right;">Already member?</a></label>
+              <input type="password" class="form-control" name="password" id="password" [(ngModel)]="model.password"
+                     #password="ngModel" required/>
+              <div *ngIf="f.submitted && !password.valid" class="help-block">Password is required</div>
+            </div>
+            <div class="form-group">
+              <button [disabled]="loading" class="btn btn-success btn-block cursorPointer fwb">Register</button>
+              <img *ngIf="loading"
+                   src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA=="/>
+              <!--a [routerLink]="['/register']" class="btn btn-link">Register</a-->
+            </div>
+          </form>
+        </div>
+        <div style="background-color:#fff;margin-top: 4px;border: 1px solid #d8dee2;
+    border-radius: 5px;padding:12px;text-align: center;">
+          <label>Already member? <a href="/login">Log in</a></label>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>

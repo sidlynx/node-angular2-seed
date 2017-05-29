@@ -1,0 +1,42 @@
+{
+  "name": "opheed",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "buildback": "gulp buildBack",
+    "prestart": "npm run build",
+    "start": "node dist/index.js",
+    "startback": "node dist/index.js",
+    "install": "yarn",
+    "build": "gulp build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/sidlynx/opheed.git"
+  },
+  "author": "sidlynx@gmail.com (Mohammed Hamdoune)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/sidlynx/opheed/issues"
+  },
+  "homepage": "https://gitlab.com/sidlynx/opheed#README",
+  "devDependencies": {
+    "@types/node": "^7.0.22",
+    "gulp": "^3.9.1"
+  },
+  "dependencies": {
+    "@types/express": "^4.0.35",
+    "async": "^2.4.1",
+    "body-parser": "^1.17.2",
+    "connect-redis": "^3.3.0",
+    "cookie-parser": "^1.4.3",
+    "express": "^4.15.3",
+    "express-session": "^1.15.3",
+    "node-uuid": "^1.4.8",
+    "passport": "^0.3.2",
+    "passport-local": "^1.0.0",
+    "redis": "^2.7.1"
+  }
+}

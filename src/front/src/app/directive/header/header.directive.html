@@ -1,0 +1,38 @@
+<div class="container-fluid" style="height: 40px;">
+  <div class="row">
+    <nav class="navbar fixed-top navbar-light bg-faded" style="color: rgba(255,255,255,0.75);
+    background-color: #24292e;height: 40px;padding:0px;">
+      <div class="container" style="height: 100%;">
+        <div class="row" style="height: 100%;">
+          <div class="col-6"></div>
+          <div class="col-6" style="text-align: right;height: 100%;padding-top:6px;">
+            <table style="float: right;">
+              <tr>
+                <td class="fwb" style="padding-right:16px;">{{currentUser.firstName}}</td>
+                <td class="fwb" style="padding-right:16px;">Home</td>
+                <td><i class="fa fa-2x fa-comments"></i></td>
+                <td><i class="fa fa-2x fa-user-circle-o"></i></td>
+                <td>
+                  <span class="dropdown" style="margin-left:16px;">
+                    <span class="dropdown-toggle" data-toggle="dropdown" style="cursor:pointer;">
+                      <i class="fa fa-2x fa-question-circle "></i>&nbsp;
+                    </span>
+                    <div class="dropdown-menu dropdown-user" style="border-radius:0px !important;">
+                      <a  href="" class="dropdown-item fwb">
+                        <i class="fa fa-user"></i> User Profile
+                      </a>
+                      <a  href="" class="dropdown-item fwb"><i
+                        class="fa fa-gears"></i> Settings
+                      </a>
+                      <a (click)="logout()" href="" class="dropdown-item fwb"><i class="fa fa-sign-out"></i> Logout </a>
+                    </div>
+                  </span>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
+</div>
